@@ -5,13 +5,13 @@ import { increment, decrement } from "../actions";
 class Counter extends Component {
   incrementIfOdd = () => {
     if (this.props.count % 2 !== 0) {
-      this.props.increment(this.props.count);
+      this.props.increment();
     }
   };
 
   incrementAsync = () => {
     setTimeout(() => {
-      this.props.increment(this.props.count);
+      this.props.increment();
     }, 1000);
   };
 
@@ -24,14 +24,14 @@ class Counter extends Component {
         Clicked: {this.props.count} times
         <button
           onClick={() => {
-            this.props.increment(this.props.count);
+            this.props.increment();
           }}
         >
           +
         </button>
         <button
           onClick={() => {
-            this.props.decrement(this.props.count);
+            this.props.decrement();
           }}
         >
           -
